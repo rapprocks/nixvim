@@ -14,6 +14,7 @@
         "javascript"
         "powershell"
         "yaml"
+        "toml"
       ];
       indent.enable = true;
       highlight = {
