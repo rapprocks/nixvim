@@ -18,5 +18,16 @@
         };
       };
     };
+
+    none-ls = {
+      enable = true;
+      enableLspFormat = true;
+      sources.formatting = {
+        alejandra.enable = true;
+        prettier.enable = true;
+        stylua.enable = true;
+        yamlfmt.enable = true;
+      };
+    };
   };
 }
