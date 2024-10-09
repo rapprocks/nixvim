@@ -17,6 +17,7 @@
   plugins = {
     harpoon.enable = true;
     copilot-vim.enable = true;
+    web-devicons.enable = true;
   };
   extraPlugins = [
     pkgs.vimPlugins.render-markdown-nvim
