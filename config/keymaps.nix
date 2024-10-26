@@ -23,5 +23,13 @@
       action = "vim.lsp.buf.format";
       options.desc = "Format using none-ls";
     }
+    {
+      mode = "n";
+      key = "<C-t>";
+      action = ":NvimTreeToggle<cr>";
+      options.desc = "Toggle file explorer";
+      options.silent = true;
+      options.noremap = true;
+    }
   ];
 }
