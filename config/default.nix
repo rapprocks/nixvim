@@ -19,6 +19,7 @@
     copilot-vim.enable = true;
     web-devicons.enable = true;
     nvim-tree.enable = true;
+		typescript-tools.enable = true;
   };
   extraPlugins = [
     pkgs.vimPlugins.render-markdown-nvim
