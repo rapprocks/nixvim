@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   imports = [
     ./options.nix
     ./gruvbox.nix
@@ -12,14 +13,10 @@
     ./cmp.nix
   ];
 
-  #environment.systemPackages = [pkgs.ripgrep];
-
   plugins = {
-    harpoon.enable = true;
-    copilot-vim.enable = true;
     web-devicons.enable = true;
     nvim-tree.enable = true;
-		typescript-tools.enable = true;
+    typescript-tools.enable = true;
   };
   extraPlugins = [
     pkgs.vimPlugins.render-markdown-nvim
