@@ -2,7 +2,7 @@
 {
   imports = [
     ./options.nix
-    ./gruvbox.nix
+    ./colorscheme.nix
     ./keymaps.nix
     ./telescope.nix
     ./treesitter.nix
@@ -15,7 +15,11 @@
 
   plugins = {
     web-devicons.enable = true;
-    nvim-tree.enable = true;
+    nvim-tree = {
+      enable = true;
+      autoClose = true;
+      settings.git.enable = true;
+    };
     typescript-tools.enable = true;
   };
   extraPlugins = [
