@@ -6,7 +6,7 @@
     ./keymaps.nix
     ./telescope.nix
     ./treesitter.nix
-    ./alpha.nix
+		#./alpha.nix
     ./bufferline.nix
     ./lsp.nix
     ./none-ls.nix

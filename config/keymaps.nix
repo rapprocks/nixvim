@@ -2,7 +2,6 @@
   globals = {
     mapleader = " ";
     maplocalleader = " ";
-    #have_nerd_font = true; #Do i need this?
   };
   keymaps = [
     {
