@@ -1,4 +1,18 @@
 {
+  lsp.inlayHints.enable = true;
+  lsp.keymaps = [
+    {
+      key = "gd";
+      lspBufAction = "definition";
+    }
+    {
+      key = "gD";
+      lspBufAction = "references";
+    }
+  ];
+  lsp.servers = {
+    lua_ls.enable = true;
+  };
   plugins = {
     lsp-format = {
       enable = true;
