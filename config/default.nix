@@ -6,11 +6,12 @@
     ./keymaps.nix
     ./telescope.nix
     ./treesitter.nix
-    #./alpha.nix
     ./bufferline.nix
     ./lsp.nix
-    ./none-ls.nix
-    ./cmp.nix
+		#./none-ls.nix
+    #./cmp.nix
+    ./blink.nix
+		./conform.nix
   ];
 
   clipboard = {
@@ -19,6 +20,7 @@
   };
   plugins = {
     web-devicons.enable = true;
+    nvim-autopairs.enable = true;
     nvim-tree = {
       enable = true;
       autoClose = true;
