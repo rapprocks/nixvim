@@ -1,4 +1,8 @@
 {
+  diagnostic.settings = {
+    virtual_text.enable = true;
+    underline = true;
+  };
   lsp.inlayHints.enable = true;
   lsp.keymaps = [
     {

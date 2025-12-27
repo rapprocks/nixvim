@@ -4,9 +4,9 @@
     ./options.nix
     ./colorscheme.nix
     ./keymaps.nix
-    ./telescope.nix
+    ./telescope2.0.nix
     ./treesitter.nix
-    #./alpha.nix
+    ./mini.nix
     ./bufferline.nix
     ./lsp.nix
     ./none-ls.nix
@@ -19,6 +19,7 @@
   };
   plugins = {
     web-devicons.enable = true;
+    nvim-autopairs.enable = true;
     nvim-tree = {
       enable = true;
       autoClose = true;

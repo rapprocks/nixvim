@@ -3,6 +3,7 @@
     enable = true;
     extensions = {
       fzf-native.enable = true;
+      ui-select.enable = true;
     };
     settings = {
       defaults = {
@@ -12,15 +13,57 @@
         ];
 
         border = {
-          prompt = [1 1 1 1];
-          results = [1 1 1 1];
-          preview = [1 1 1 1];
+          prompt = [
+            1
+            1
+            1
+            1
+          ];
+          results = [
+            1
+            1
+            1
+            1
+          ];
+          preview = [
+            1
+            1
+            1
+            1
+          ];
         };
 
         borderchars = {
-          prompt = ["─" "│" "─" "│" "┌" "┐" "│" "│"];
-          results = [" " "│" "─" "│" "│" "│" "┘" "└"];
-          preview = ["─" "│" "─" "│" "┌" "┐" "┘" "└"];
+          prompt = [
+            "─"
+            "│"
+            "─"
+            "│"
+            "┌"
+            "┐"
+            "│"
+            "│"
+          ];
+          results = [
+            " "
+            "│"
+            "─"
+            "│"
+            "│"
+            "│"
+            "┘"
+            "└"
+          ];
+          preview = [
+            "─"
+            "│"
+            "─"
+            "│"
+            "┌"
+            "┐"
+            "┘"
+            "└"
+          ];
         };
 
         results_title = false;
