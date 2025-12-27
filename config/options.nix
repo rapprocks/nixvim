@@ -1,16 +1,15 @@
 {
   opts = {
-    clipboard = "unnamedplus";
     number = true;
     relativenumber = true;
     signcolumn = "yes";
     cursorline = true;
     autoindent = true;
     smartindent = true;
-    nu = true;
+    breakindent = true;
     tabstop = 2;
     shiftwidth = 2;
-    updatetime = 50;
+    updatetime = 250;
     termguicolors = true;
     mouse = "a";
     syntax = "on";
@@ -19,5 +18,8 @@
     swapfile = false;
     undofile = true;
     scrolloff = 999;
+    ignorecase = true;
+    smartcase = true;
+    inccommand = "split";
   };
 }

@@ -14,28 +14,20 @@
       lspBufAction = "references";
     }
   ];
-  lsp.servers = {
-    lua_ls.enable = true;
-  };
   plugins = {
-    lsp-format = {
-      enable = true;
+    #lsp-format.enable = true;
+    fidget.enable = true;
+    lazydev = {
+      enable = true; # autoEnableSources not enough
+      settings = {
+        library = [
+          {
+            path = "\${3rd}/luv/library";
+            words = ["vim%.uv"];
+          }
+        ];
+      };
     };
-  };
-  plugins.lazydev = {
-    enable = true; # autoEnableSources not enough
-    settings = {
-      library = [
-        {
-          path = "\${3rd}/luv/library";
-          words = ["vim%.uv"];
-        }
-      ];
-    };
-  };
-
-  plugins.fidget = {
-    enable = true;
   };
 
   plugins.lsp = {
@@ -59,6 +51,9 @@
       yamlls = {
         enable = true;
       };
+      cssls.enable = true;
+      bashls.enable = true;
+      jsonls.enable = true;
     };
     keymaps = {
       diagnostic = {
