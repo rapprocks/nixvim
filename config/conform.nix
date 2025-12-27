@@ -1,15 +1,48 @@
-{
-  plugins = {
-    conform-nvim = {
-      enable = true;
-      settings = {
-        format_on_save = ''
-          return { timeout_ms = 5000, lsp_format = "fallback" }
-        '';
-        formatters_by_ft = {
-          lua = [ "stylua" ];
-        };
+{pkgs, ...}: {
+  extraPackages = with pkgs; [
+    alejandra
+    stylua
+  ];
+
+  plugins.conform-nvim = {
+    enable = true;
+    settings = {
+      notify_on_error = false;
+      format_on_save = ''
+        function(bufnr)
+          -- Disable "format_on_save lsp_fallback" for lanuages that don't
+          -- have a well standardized coding style. You can add additional
+          -- lanuages here or re-enable it for the disabled ones.
+          local disable_filetypes = { c = true, cpp = true }
+          if disable_filetypes[vim.bo[bufnr].filetype] then
+            return nil
+          else
+            return {
+              timeout_ms = 500,
+              lsp_format = "fallback",
+            }
+          end
+        end
+      '';
+      formatters_by_ft = {
+        lua = ["stylua"];
+        nix = ["alejandra"];
       };
     };
   };
+
+  keymaps = [
+    {
+      mode = "";
+      key = "<leader>fc";
+      action.__raw = ''
+        function()
+          require('conform').format { async = true, lsp_fallback = true }
+        end
+      '';
+      options = {
+        desc = "[F]ormat buffer";
+      };
+    }
+  ];
 }

@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   imports = [
     ./options.nix
     ./colorscheme.nix
@@ -9,8 +8,8 @@
     ./mini.nix
     ./bufferline.nix
     ./lsp.nix
-    ./none-ls.nix
-    ./cmp.nix
+    ./blink.nix
+    ./conform.nix
   ];
 
   clipboard = {
