@@ -20,6 +20,8 @@
   plugins = {
     lsp-format = {
       enable = true;
+    };
+  };
   plugins.lazydev = {
     enable = true; # autoEnableSources not enough
     settings = {
