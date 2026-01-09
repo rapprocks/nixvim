@@ -17,7 +17,7 @@
     splitbelow = true;
     swapfile = false;
     undofile = true;
-    scrolloff = 999;
+    scrolloff = 0;
     ignorecase = true;
     smartcase = true;
     inccommand = "split";
