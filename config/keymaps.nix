@@ -6,6 +6,11 @@
   keymaps = [
     {
       mode = "n";
+      key = "<Esc>";
+      action = "<cmd>nohlsearch<CR>";
+    }
+    {
+      mode = "n";
       key = "<leader>gf";
       action = "vim.lsp.buf.format";
       options.desc = "Format using none-ls";
