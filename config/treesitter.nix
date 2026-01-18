@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   plugins.treesitter = {
     enable = true;
     grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
@@ -40,6 +41,6 @@
         additional_vim_regex_highlighting = false;
       };
     };
-    folding = false;
+    folding.enable = false;
   };
 }

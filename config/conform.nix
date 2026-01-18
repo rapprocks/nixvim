@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   extraPackages = with pkgs; [
     alejandra
+    nixfmt
     stylua
   ];
 
@@ -26,7 +27,8 @@
       '';
       formatters_by_ft = {
         lua = ["stylua"];
-        nix = ["alejandra"];
+        #nix = ["alejandra"];
+        nix = ["nixfmt"];
       };
     };
   };

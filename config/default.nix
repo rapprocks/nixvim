@@ -3,7 +3,7 @@
     ./options.nix
     ./colorscheme.nix
     ./keymaps.nix
-    ./telescope2.0.nix
+    ./telescope.nix
     ./treesitter.nix
     ./mini.nix
     ./bufferline.nix
@@ -16,20 +16,13 @@
     register = "unnamedplus";
     providers.wl-copy.enable = true;
   };
-  # https://nix-community.github.io/nixvim/NeovimOptions/autoGroups/index.html
   autoGroups = {
     highlight-yank = {
       clear = true;
     };
   };
 
-  # [[ Basic Autocommands ]]
-  #  See `:help lua-guide-autocommands`
-  # https://nix-community.github.io/nixvim/NeovimOptions/autoCmd/index.html
   autoCmd = [
-    # Highlight when yanking (copying) text
-    #  Try it with `yap` in normal mode
-    #  See `:help vim.hl.on_yank()`
     {
       event = ["TextYankPost"];
       desc = "Highlight when yanking (copying) text";
