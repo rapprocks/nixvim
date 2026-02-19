@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   imports = [
     ./options.nix
     ./colorscheme.nix
@@ -24,7 +25,7 @@
 
   autoCmd = [
     {
-      event = ["TextYankPost"];
+      event = [ "TextYankPost" ];
       desc = "Highlight when yanking (copying) text";
       group = "highlight-yank";
       callback.__raw = ''
@@ -35,6 +36,7 @@
     }
   ];
   plugins = {
+    colorizer.enable = true;
     web-devicons.enable = true;
     nvim-autopairs.enable = true;
     nvim-tree = {

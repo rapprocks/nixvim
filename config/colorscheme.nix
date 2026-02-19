@@ -10,9 +10,9 @@
     rose-pine = {
       enable = true;
       settings = {
-        dark_variant = "moon";
+        dark_variant = "dawn";
         styles = {
-          transparency = true;
+          transparency = false;
         };
       };
     };
