@@ -82,6 +82,13 @@
           desc = "[ ] Find existing buffers";
         };
       };
+      "<leader>sch" = {
+        mode = "n";
+        action = "highlights";
+        options = {
+          desc = "[ ] Find Neovim highlights";
+        };
+      };
     };
     settings = {
       extensions.__raw = "{ ['ui-select'] = { require('telescope.themes').get_dropdown() } }";
