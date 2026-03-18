@@ -11,6 +11,7 @@
     ./lsp.nix
     ./blink.nix
     ./conform.nix
+    ./auto-dark-mode.nix
   ];
 
   clipboard = {
@@ -61,6 +62,15 @@
   };
   extraPlugins = [
     pkgs.vimPlugins.render-markdown-nvim
+    (pkgs.vimUtils.buildVimPlugin {
+      name = "my-plugin";
+      src = pkgs.fetchFromGitHub {
+        owner = "f-person";
+        repo = "auto-dark-mode.nvim";
+        rev = "e300259ec777a40b4b9e3c8e6ade203e78d15881";
+        hash = "sha256-PhhOlq4byctWJ5rLe3cifImH56vR2+k3BZGDZdQvjng=";
+      };
+    })
   ];
   extraConfigLua = "
 			require('render-markdown').setup({})
