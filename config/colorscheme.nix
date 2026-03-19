@@ -13,7 +13,7 @@
         dark_variant = "main";
         variant = "auto";
         styles = {
-          transparency = false;
+          transparency = true;
         };
       };
     };
