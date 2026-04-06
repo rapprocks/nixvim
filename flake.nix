@@ -22,13 +22,19 @@
       ];
 
       perSystem =
-        { system, ... }:
+        { system, pkgs, ... }:
         let
           nixvimLib = nixvim.lib.${system};
           nixvim' = nixvim.legacyPackages.${system};
+          #nixvimModule = {
+          #  inherit system; # or alternatively, set `pkgs`
+          #  module = import ./config; # import the module directly
+          #  extraSpecialArgs = {
+          #  };
+          #};
           nixvimModule = {
-            inherit system; # or alternatively, set `pkgs`
-            module = import ./config; # import the module directly
+            inherit pkgs;
+            module = import ./config;
             extraSpecialArgs = {
             };
           };
