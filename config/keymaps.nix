@@ -23,13 +23,5 @@
       options.silent = true;
       options.noremap = true;
     }
-    {
-      mode = "n";
-      key = "<C-o>";
-      action = ":lua MiniFiles.open()<cr>";
-      options.desc = "Toggle mini file explorer";
-      options.silent = true;
-      options.noremap = true;
-    }
   ];
 }

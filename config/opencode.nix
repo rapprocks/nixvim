@@ -1,5 +1,5 @@
 {
-  snacks = {
+  plugins.snacks = {
     enable = true;
     settings = {
       input.enabled = true;
@@ -9,7 +9,7 @@
     enable = true;
     settings = {
       auto_reload = false;
-      port = 8080;
+      #port = 8080;
       #prompts = {
       #  example = {
       #    description = "An example prompt configuration";
@@ -18,4 +18,18 @@
       #};
     };
   };
+  keymaps = [
+    {
+      mode = "n";
+      key = "<C-o>";
+      action.__raw = ''
+        function()
+          require("opencode").ask("@this: ", { submit = true})
+        end
+      '';
+      options = {
+        desc = "Ask opencode...";
+      };
+    }
+  ];
 }
